@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<!--  
+====================================================
+Homepage: https://vibrantabhi19.github.io
+Credits: https://vibrantabhi19.github.io/disclosure
+====================================================
+-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<!-- link href="http://gmpg.org/xfn/11" rel="profile" -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<title>
+  
+    Iris Flower DataSet: Intro to Visualizing a Decision Tree · Hello. I'm Abhishek Kumar
+  
+</title>
+
+<!-- Search Engine Optimization -->
+<meta name="description" content="A very basic beginner guide to visualize the one of the classic and beginner level data set available i.e 'The Iris Flower Dataset' to predict the label for new flower using Python Libraries like scikit-learn, NumPy etc.">
+<meta name="keywords" content="Iris Flower Data Set, solution, scikit-learn, Data Analysis">
+
+
+
+
+<!-- Twitter Cards -->
+  
+<meta name="twitter:card" content="player">
+<meta name="twitter:site" content="@tedtalks">
+
+  
+<meta name="twitter:image" content="http://img.youtube.com/vi/iG9CE55wbtY/0.jpg">
+<meta name="twitter:player" content="https://www.youtube.com/embed/iG9CE55wbtY">
+<meta name="twitter:player:width" content="1920">
+<meta name="twitter:player:height" content="1080">
+
+
+
+<meta name="twitter:title" content="Iris Flower DataSet: Intro to Visualizing a Decision Tree">
+<meta name="twitter:description" content="A very basic beginner guide to visualize the one of the classic and beginner level data set available i.e 'The Iris Flower Dataset' to predict the label for new flower using Python Libraries like scikit-learn, NumPy etc.">
+<meta name="twitter:creator" content="@abhi_kumar07/">
+<!-- End Twitter Cards -->
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Iris Flower DataSet: Intro to Visualizing a Decision Tree">
+<meta property="og:description" content="A very basic beginner guide to visualize the one of the classic and beginner level data set available i.e 'The Iris Flower Dataset' to predict the label for new flower using Python Libraries like scikit-learn, NumPy etc.">
+<meta property="og:url" content="https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/">
+<meta property="og:site_name" content="Hello. I'm Abhishek Kumar">
+
+  
+<meta property="og:image" content="http://img.youtube.com/vi/iG9CE55wbtY/0.jpg">
+<meta property="og:video" content="https://www.youtube.com/embed/iG9CE55wbtY">
+<meta property="fb:app_id" content="1003108156422006">
+<meta property="fb:admins" content="817465054">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400%7CTangerine%7CInconsolata">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/public/css/iconmoon.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/style.min.css">
+
+<!-- Add-on CSS to override system-wide defaults -->
+<link rel="stylesheet" href="/public/css/addon.css">
+
+<!-- CSS override per page -->
+
+
+<!-- Java scripts -->
+<!-- <script src="/public/js/jquery.min.js"></script> -->
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://vibrantabhi19.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://vibrantabhi19.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-144x144-precomposed.png">
+<!-- 180x180 (precomposed) for iPhone 6 -->
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-180x180.png">
+<!-- 192x192 (precomposed) for Android -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://vibrantabhi19.github.io/images/icons/android-icon-192x192.png">
+
+
+<link rel="canonical" href="https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/">
+<link rel="author" href="https://plus.google.com/+AbhishekKumarTiwari07?rel=author">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://vibrantabhi19.github.io/feed.xml">
+
+
+  <!--Load Mathjax-->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ['\(', '\)'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+
+
+
+</head>
+
+
+<body>
+
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+<!--   <div class="sidebar-item">
+    <p>This is my personal Blog/Portfolio</p>
+  </div> -->
+
+  <nav class="sidebar-nav">
+    <!-- a class="sidebar-nav-item" href="/">Home</a-->
+
+    
+
+    
+
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/"><i class="iconside iconm-home"></i> Home</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/about/"><i class="iconside iconm-user"></i> About</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/blog/"><i class="iconside iconm-quill"></i> Blog</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/tags/"><i class="fa fa-tags"></i> Tags</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="/archive/" target="_blank"><i class="fa fa-archive"></i> Archive</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/contact/"><i class="iconside iconm-envelop"></i> Contact</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://twitter.com/abhi_kumar07" target="_blank"><i class="iconside iconm-twitter"></i> Follow me on</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/feed.xml"><i class="iconside iconm-feed2"></i> Feed</a>
+                
+         
+
+  </nav>
+
+<hr class="gh">
+
+﻿
+    <!-- span class="searchicon2"><i class="fa fa-search fa-2x"></i></span -->
+    <form role="search" method="get" action="https://vibrantabhi19.github.io/cse/">
+        <input id="searchString2" name="searchString2" placeholder=" Search" type="text">
+    </form>
+</div>
+
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Hello. I'm Abhishek Kumar</a>
+            <!-- <small></small> -->
+            <div class="headicons">
+              <small><a href="https://vibrantabhi19.github.io/about" rel="me" title="About"><i class="iconm iconm-user"></i></a></small>
+              <small><a href="https://vibrantabhi19.github.io/blog" rel="me" title="Blog"><i class="iconm iconm-quill"></i></a></small>
+              <small><a href="https://vibrantabhi19.github.io/contact" rel="me" title="Contact"><i class="iconm iconm-envelop"></i></a></small> 
+            </div>           
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 itemprop="name" class="post-title">Iris Flower DataSet: Intro to Visualizing a Decision Tree</h1>
+  <span class="post-date" itemprop="datePublished" content="2016-10-13"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/" itemprop="url" title="Permanent link to this post">13 Oct 2016</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="Iris Flower Data Set, solution, scikit-learn, and Data Analysis"><i class="fa fa-tags" title="page tags"></i> <a href="https://vibrantabhi19.github.io/tags/#Iris+Flower+Data+Set" title="Pages tagged Iris Flower Data Set" rel="tag">Iris Flower Data Set</a> •  <a href="https://vibrantabhi19.github.io/tags/#solution" title="Pages tagged solution" rel="tag">solution</a> •  <a href="https://vibrantabhi19.github.io/tags/#scikit-learn" title="Pages tagged scikit-learn" rel="tag">scikit-learn</a> •  <a href="https://vibrantabhi19.github.io/tags/#Data+Analysis" title="Pages tagged Data Analysis" rel="tag">Data Analysis</a></span>
+    
+      <span class="social-icons"><a href="https://twitter.com/share?text=Iris%20Flower%20DataSet:%20Intro%20to%20Visualizing%20a%20Decision%20Tree&amp;url=https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/&amp;via=abhi_kumar07/" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+<a href="https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/#disqus_thread" class="social-icons" title="Comments"><i class="fa fa-comments"></i></a>
+<a href="https://vibrantabhi19.github.io/featured" title="Featured posts"><i class="fa fa-paperclip" title="Featured" style="vertical-align: top;"></i></a>
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
+    
+  <h1>Iris Data Set</h1>
+<p>The Iris flower data set or Fisher’s Iris data set is a multivariate data set introduced by Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis.</p>
+
+<p>This data sets consists of 3 different types of irises’ (Setosa, Versicolour, and Virginica) petal and sepal length, stored in a 150x4 numpy.ndarray</p>
+
+<p>The rows being the samples and the columns being: Sepal Length, Sepal Width, Petal Length and Petal Width. The details of the Data set can be found <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set">at</a></p>
+
+<!--more-->
+
+<h3 id="goals-for-the-data-set">Goals for the Data Set</h3>
+
+<p>To analysize the Dataset we will follow the following set of procedure. Make sure you try and understand each of it.</p>
+
+<ul>
+  <li>
+<strong>Import Dataset:</strong> The first step is to import the Iris data set into our code. Fortunately, scikit-learn comes with this preloaded Dataset, so we just need to import it. Load the dataset form the official scikit learn website
+<a href="http://scikit-learn.org/stable/datasets/">visit</a>
+</li>
+  <li>
+<strong>Train a classifier</strong>, use <code class="highlighter-rouge">&lt;em&gt;</code>.</li>
+  <li>
+<strong>Predict label for new flower</strong>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="highlighter-rouge">title</code> attribute for the full phrase.</li>
+  <li>
+<strong>Visualize the tree</strong>Citations, like <cite>— Mark otto</cite>, should use <code class="highlighter-rouge">&lt;cite&gt;</code>.</li>
+</ul>
+
+<p>Most of these elements are styled by browsers with few modifications on our part.</p>
+
+<h3 id="import-code-and-understanding-the-dataset">Import code and Understanding the Dataset</h3>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11</pre></td>
+<td class="code"><pre><span class="o">//</span> <span class="n">Load</span> <span class="n">the</span> <span class="n">dataset</span> <span class="n">form</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+
+<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+
+<span class="o">//</span> <span class="n">Printing</span> <span class="n">the</span> <span class="n">different</span> <span class="n">features</span><span class="o">/</span><span class="n">parameters</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Dataset</span>
+<span class="o">//</span> <span class="n">Print</span> <span class="n">features_names</span>
+<span class="k">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">features_names</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span> <span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>Now we have printed the features of the flower on the basis of which we are going to classify the problem. The different features are ‘Sepal length’, ‘Sepal width’, ‘Petal length’ and ‘Petal width’. And also the target variables contains the labels.</p>
+
+<p>Now lets see the complete Data Set</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2</pre></td>
+<td class="code"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">)):</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"Examples </span><span class="si">%</span><span class="s">d: label </span><span class="si">%</span><span class="s">s, features </span><span class="si">%</span><span class="s">s"</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">iris</span><span class="o">.</span><span class="n">target</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">iris</span><span class="o">.</span><span class="n">data</span> <span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>The data set contains details of 150 Iris Flowers and we just printed them in a tabular form.</p>
+
+<h4 id="train-a-classifier-and-predict-label-for-new-flower">Train a classifier and predict label for new flower:</h4>
+
+<p>We first need a testing data, A testing data are the examples used to ‘Test’ the classifier’s accuracy, these are not the part of the actual training dataset. Sometimes, while working with huge datasets it’s often the case that it takes a lot of time to actually train our data without the surety that our classifier algorithms works fine. So it’s always a good practise to ‘Test’ the data before traning it. Testing, unlike in programming, is a very necassry and important element of Machine Learning.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre></td>
+<td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="n">test_idx</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
+
+<span class="c">#np.delete(name of array from where the data is to be deleted, the subarray that is to be deleted) Refer NumPy docs</span>
+<span class="s">""""numpy.delete(arr, obj, axis=None)[source]
+
+    Return a new array with sub-arrays along an axis deleted. For a one dimensional array, this returns those entries not returned by arr[obj].
+    Parameters: 
+
+    arr : array_like
+        Input array.
+
+    obj : slice, int or array of ints
+        Indicate which sub-arrays to remove.
+
+    axis : int, optional
+        The axis along which to delete the subarray defined by obj. If axis is None, obj is applied to the flattened array.
+
+    Returns:  
+
+    out : ndarray
+         A copy of arr with the elements specified by obj removed. 
+         Note that delete does not occur in-place. If axis is None, out is a flattened array.""""</span><span class="err">
+</span><span class="s">train_target = np.delete(iris.target, test_idx)</span><span class="err">
+</span><span class="s">train_data = np.delete(iris.data, test_idx)</span><span class="err">
+
+</span><span class="s">#Testing Data, for testing data we are only focused on test_idx</span><span class="err">
+</span><span class="s">test_target = iris.target[test_idx]</span><span class="err">
+</span><span class="s">test_data = iris.data[test_idx]</span><span class="err">
+
+</span><span class="s">#Creating decision tree</span><span class="err">
+</span><span class="s">clf = tree.DecisionTreeClassifier()</span><span class="err">
+</span><span class="s">clf.fit(train_data, train_target)</span><span class="err">
+
+</span><span class="s">print (test_target)</span><span class="err">
+</span><span class="s">print (clf.predict(test_data))</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>For details about NumPy array, refer to the <a href="https://docs.scipy.org/doc/numpy/reference/">docs</a></p>
+
+<h4 id="visualize-the-tree">VIsualize the tree.</h4>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14</pre></td>
+<td class="code"><pre><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
+                         <span class="n">feature_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">,</span>  
+                         <span class="n">class_names</span><span class="o">=</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">,</span>  
+                         <span class="n">filled</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  
+                         <span class="n">special_characters</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  
+<span class="n">graph</span> <span class="o">=</span> <span class="n">pydotplus</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>  
+<span class="n">Image</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">create_png</span><span class="p">())</span> 
+
+<span class="o">//</span> <span class="n">pydotplus</span> <span class="n">installed</span><span class="p">,</span> <span class="n">we</span> <span class="n">can</span> <span class="n">generate</span> <span class="n">a</span> <span class="n">PDF</span> <span class="nb">file</span> <span class="p">(</span><span class="ow">or</span> <span class="nb">any</span> <span class="n">other</span> <span class="n">supported</span> <span class="nb">file</span> <span class="nb">type</span><span class="p">)</span> <span class="n">directly</span> <span class="ow">in</span> <span class="n">Python</span><span class="p">:</span>
+<span class="kn">import</span> <span class="nn">pydotplus</span> 
+<span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span> 
+<span class="n">graph</span> <span class="o">=</span> <span class="n">pydotplus</span><span class="o">.</span><span class="n">graph_from_dot_data</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span> 
+<span class="n">graph</span><span class="o">.</span><span class="n">write_pdf</span><span class="p">(</span><span class="s">"iris.pdf"</span><span class="p">)</span> <span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<h3 id="decision-trees-using-decisiontreeregressor-class">Decision trees using DecisionTreeRegressor class:</h3>
+
+<p>Decision trees can also be applied to regression problems, using the DecisionTreeRegressor class.</p>
+
+<p>As in the classification setting, the fit method will take as argument arrays X and y, only that in this case y is expected to have floating point values instead of integer values:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7</pre></td>
+<td class="code"><pre><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="n">X</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">]</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">()</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+<span class="n">array</span><span class="p">([</span> <span class="mf">0.5</span><span class="p">]</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>Below is a partial code showing main steps of merge function.</p>
+
+<p><code data-gist-id="0fe211678316cc53370c" data-gist-file="merge_tables_datatable.R" data-gist-line="50-52,57,65-69,80,88-90,100-106"></code></p>
+
+<h3 id="references">References</h3>
+
+<p>Refer to the following docs/videos for more information on how to apply Machine Learning to Iris Data Set.</p>
+
+
+  <hr>
+  
+  <span class="post-date metafoot" itemprop="datePublished" content="2016-10-13"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/" itemprop="url" title="Permanent link to this post">13 Oct 2016</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="Iris Flower Data Set, solution, scikit-learn, and Data Analysis"><i class="fa fa-tags" title="page tags"></i> <a href="https://vibrantabhi19.github.io/tags/#Iris+Flower+Data+Set" title="Pages tagged Iris Flower Data Set" rel="tag">Iris Flower Data Set</a> •  <a href="https://vibrantabhi19.github.io/tags/#solution" title="Pages tagged solution" rel="tag">solution</a> •  <a href="https://vibrantabhi19.github.io/tags/#scikit-learn" title="Pages tagged scikit-learn" rel="tag">scikit-learn</a> •  <a href="https://vibrantabhi19.github.io/tags/#Data+Analysis" title="Pages tagged Data Analysis" rel="tag">Data Analysis</a></span>
+    
+      <span class="social-icons"><a href="https://twitter.com/share?text=Iris%20Flower%20DataSet:%20Intro%20to%20Visualizing%20a%20Decision%20Tree&amp;url=https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/&amp;via=abhi_kumar07/" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+<a href="https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/#disqus_thread" class="social-icons" title="Comments"><i class="fa fa-comments"></i></a>
+<a href="https://vibrantabhi19.github.io/featured" title="Featured posts"><i class="fa fa-paperclip" title="Featured" style="vertical-align: top;"></i></a>
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
+    
+</div>
+
+
+  <div class="printMsg">
+<table>
+  <thead>
+    <tr>
+      <th><i class="fa fa-twitter">@abhi_kumar07/</i></th>
+      <th>QR code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<i class="fa fa-anchor"> https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/</i><br><i class="fa fa-calendar"> 13-Oct-16</i><br><i class="fa fa-creative-commons"> BY-NC-SA 4.0 https://vibrantabhi19.github.io/disclosure</i>
+</td>
+      <td><img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/&amp;choe=UTF-8" alt="https://vibrantabhi19.github.io/blog/2016/10/13/Iris_dataset_solution/"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<div class="page-break"></div>
+<div class="related">
+  <h2>Related Posts</h2>
+<ul>
+  
+    
+  
+     
+       
+        
+       
+        
+       
+        
+       
+        
+      
+    
+  
+</ul>
+</div>
+
+<div class="prevnext">
+  
+    <a class="prevnext-item older" href="https://vibrantabhi19.github.io/blog/2015/01/31/whats-jekyll/" title="What's Jekyll?">Older</a>
+  
+  
+    <span class="prevnext-item older">Newer</span>
+  
+</div>
+
+<div class="page-break"></div>
+
+<div id="disqus_thread"></div>
+<!-- /#disqus_thread -->
+
+                    <div class="custom-footer" style="display: block;">
+            <div class="footer-social-icons">
+            <ul class="social-icons">
+            
+              
+            <li><a href="https://twitter.com/abhi_kumar07" rel="me" target="_blank" class="social-icons" title="Follow me @abhi_kumar07"> <i class="fa fa-twitter-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://plus.google.com/u/0/+AbhishekKumarTiwari07" rel="me" target="_blank" class="social-icons" title="Follow me +AbhishekKumarTiwari07"> <i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://github.com/vibrantabhi19" rel="me" target="_blank" class="social-icons" title="Code repository"> <i class="fa fa-github-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://vibrantabhi19.github.io/contact/" rel="me" class="social-icons" title="Reach Us"> <i class="fa fa-envelope-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://vibrantabhi19.github.io/feed.xml" rel="me" class="social-icons" title="Subscribe to RSS"> <i class="fa fa-rss-square fa-2x"></i></a></li>
+                      
+            </ul>
+            </div>
+            <h6 class="text-footer">
+<a rel="license" href="https://vibrantabhi19.github.io/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure" class="social-icon"><i class="fa fa-creative-commons"></i></a> <a rel="license" href="https://vibrantabhi19.github.io/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure">2016-2016</a>: <a href="https://vibrantabhi19.github.io" title="Home">vibrantabhi19.github.io</a> | <a href="https://vibrantabhi19.github.io/about/" rel="me">About</a>
+</h6>
+            </div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    
+
+<!-- gist embed -->
+
+  <!--Gist embed -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+
+
+<!-- disqus comments -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//vibrantabhi19-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+                                
+
+</body>
+</html>
