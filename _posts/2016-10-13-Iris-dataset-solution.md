@@ -2,7 +2,7 @@
 layout: post
 title: "Iris Flower DataSet: Visualizing a Decision Tree"
 date: "2016-10-13"
-slug: "Iris dataset solution"
+slug: "Iris-dataset-solution"
 description: "A very basic beginner guide to visualize the one of the classic and beginner level data set available i.e 'The Iris Flower Dataset' to predict the label for new flower using Python Libraries like scikit-learn, NumPy etc."
 category: 
   - views
