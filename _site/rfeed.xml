@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Website</title>
-    <description>Foo's blog...</description>
+    <title>Hello. I'm Abhishek Kumar</title>
+    <description>This is my personal Blog/Portfolio</description>
     <link>https://vibrantabhi19.github.io/</link>
     <atom:link href="https://vibrantabhi19.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2016-10-13T10:57:38+05:30</updated>
+    <updated>2016-10-13T13:01:30+05:30</updated>
     <id>https://vibrantabhi19.github.io</id>
     <author>
-      <name>Foo Boo</name>
+      <name>Abhishek Kumar</name>
     </author>
     
   </channel>
