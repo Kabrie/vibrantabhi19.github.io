@@ -1,7 +1,7 @@
 /* TEAM */
 Primary Contact: foo
 Site: https://vibrantabhi19.github.io/about/
-Twitter: https://twitter.com/https://twitter.com/abhi_kumar07/abhi_kumar07
+Twitter: https://twitter.com/abhi_kumar07/
 
 /* THANKS */
 Design Contributors: https://vibrantabhi19.github.io/disclosure/

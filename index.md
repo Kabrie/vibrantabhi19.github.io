@@ -4,35 +4,7 @@ permalink: index.html
 title: Abhishek Kumar
 description: "Tech Blogging, stay tuned"
 ---
-
-## [vibrantabhi19.github.io](https://github.com/vibrantabhi19/vibrantabhi19.github.io)
-
-Based on Jekyll theme: [Lanyon](http://lanyon.getpoole.com) by [**Mark Otto**](https://github.com/mdo)
-
-* License: Open sourced under the [MIT license](http://sbamin.com/disclosure/#theme-major-credit--license). 
-
-Maximum four posts on front page where first two posts are featured, and remaining are date sorted.
-
-{% if site.twitter_widget_id %}
-<div class="text-tweets">
-<div class="tweets">
-<a class="twitter-timeline"
-  data-dnt="true"
-  width="600"
-  height="250"
-  href="https://twitter.com/{{ site.owner.twitter }}"
-  data-widget-id="{{ site.twitter_widget_id }}"
-  data-tweet-limit="2"
-  data-chrome="noheader nofooter noborders noscrollbar transparent">
-  Recent Tweets</a>
-</div>
-<script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-</script>
-</div>
-{% else %}
-Twitter stream will show up here if `twitter_widget_id` is present is `_config.yml`. [Demo](http://sbamin.com)
-{% endif %}
+<a href="https://twitter.com/abhi_kumar07" class="twitter-follow-button" data-show-count="false">Follow @abhi_kumar07</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div class="posts">
   {% for post in site.categories.featured limit:2 %}
