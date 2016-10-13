@@ -18,7 +18,7 @@ tags:
   - address
 ---
 
-| <i class="fa fa-twitter"></i> | [@{{ site.owner.twitter }}](https://twitter.com/{{ site.owner.twitter }})  | 
+| <i class="fa fa-twitter"></i> | [@{{ site.owner.twitter }}](https://twitter.com/abhi_kumar07)  | 
 | - | :- |
 | <i class="fa fa-envelope"></i> | Abhishek Kumar<br>Room No 209A, Kailash Hostel<br>Shri Mata Vaishno Devi University, Kakrayal 182320<br>India   | 
 | - | :- |
@@ -36,7 +36,7 @@ tags:
   data-dnt="true"
   width="600"
   height="250"
-  href="https://twitter.com/{{ site.owner.twitter }}"
+  href="https://twitter.com/abhi_kumar07"
   data-widget-id="{{ site.twitter_widget_id }}"
   data-tweet-limit="2"
   data-chrome="noheader nofooter noborders noscrollbar transparent">
@@ -47,4 +47,7 @@ tags:
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 </script>
 </div>
+{% else %}
+Twitter stream will show up here if `twitter_widget_id` is present is `_config.yml`
+{% endif %}
 
