@@ -1,0 +1,12 @@
+/* TEAM */
+Primary Contact: foo
+Site: https://dyndna.github.io/lanyon-plus/about/
+Twitter: https://twitter.com/https://twitter.com/abhi_kumar07
+
+/* THANKS */
+Design Contributors: https://dyndna.github.io/lanyon-plus/disclosure/
+
+/* SITE */
+Last Updated: 2016/10/13
+Standards: HTML5, CSS3
+Software: Sublime Text, Chrome, Jekyll, Git, Sass

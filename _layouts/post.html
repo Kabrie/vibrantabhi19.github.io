@@ -1,85 +1,62 @@
 ---
 layout: default
-published: true
 ---
 
-<h1>{{ page.title }}</h1>
-<span class="time">{{ page.date | date_to_string }}</span>
-{% if page.categories %}
-<span class="categories">
-    &raquo; {% for category in page.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
-</span>
-{% endif %}
-<div class="search" id="js-search">
-                  <input type="text" placeholder="(sitemap)~$ type to search" class="search__input form-control" id="js-search__input">
-                  <ul class="search__results" id="js-search__results"></ul>
-                </div>
-
-<div class="content">
-    <div class="post">{{ content }}</div>
-    {% include share-page.html %}
+<div class="post">
+  <h1 itemprop="name" class="post-title">{{ page.title }}</h1>
+  <span class="post-date" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="{{ site.url }}{{ page.url }}" itemprop="url" title="Permanent link to this post">{{ page.date | date_to_string }}</a> </i></span>
+  {% if page.modified.size > 2 %}{% assign moddate = page.modified | date_to_string %}{% assign pgdate = page.date | date_to_string %}{% unless moddate == pgdate | date_to_string %}<span class="post-date" itemprop="dateModified" content="{{ page.modified | date: "%Y-%m-%d" }}"><i class="fa fa-edit" title="Last updated"> {{ page.modified | date_to_string }}</i></span>{% endunless %}{% endif %}
+  <span class="post-tags" itemprop="keywords" content="{{ page.tags | array_to_sentence_string }}">{% for tag in page.tags %}{% if forloop.first %}<i class="fa fa-tags" title="page tags"></i>{% endif %} <a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</span>
+    {% unless page.show_meta == false %}
+      {% include meta_info.html %}
+    {% endunless %}
+  {{ content }}
+  <hr>
+  {% if page.tags contains 'R' %}
+   {% include rblogger.html %}
+  {% endif %}
+  <span class="post-date metafoot" itemprop="datePublished" content="{{ page.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="{{ site.url }}{{ page.url }}" itemprop="url" title="Permanent link to this post">{{ page.date | date_to_string }}</a> </i></span>
+  {% if page.modified.size > 2 %}{% assign moddate = page.modified | date_to_string %}{% assign pgdate = page.date | date_to_string %}{% unless moddate == pgdate | date_to_string %}<span class="post-date metafoot" itemprop="dateModified" content="{{ page.modified | date: "%Y-%m-%d" }}"><i class="fa fa-edit" title="Last updated"> {{ page.modified | date_to_string }}</i></span>{% endunless %}{% endif %}
+  <span class="post-tags" itemprop="keywords" content="{{ page.tags | array_to_sentence_string }}">{% for tag in page.tags %}{% if forloop.first %}<i class="fa fa-tags" title="page tags"></i>{% endif %} <a href="{{ site.url }}/tags/#{{ tag | cgi_escape }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %} &bull; {% endunless %}{% endfor %}</span>
+    {% unless page.show_meta == false %}
+      {% include meta_info.html %}
+    {% endunless %}
 </div>
 
-{% assign hasSimilar = '' %}
-{% for post in site.posts  %}
-    {% assign postHasSimilar = false %}
-    {% for tag in post.categories %}
-        {% for thisTag in page.categories %}
-            {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
-                {% if hasSimilar.size == 0 %}
-                <div class="panel-body">
-                <h4>Related Posts</h4>
-                <ul>
-                {% endif %}
-                <li class="relatedPost">
-                    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                    {% if post.categories %}
-                        (Categories: {% for category in post.categories %}<a href="/category/{{ category }}">{{ category }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %})
-                    {% endif %}
-                </li>
-                {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
-                {% assign postHasSimilar = true %}
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-{% endfor %}
-{% if hasSimilar.size > 0 %}
-    </ul>
-    </div>
-{% endif %}
+{% unless page.hide_printmsg == true %}
+  {% include printmsgposts.html %}
+{% endunless %}
 
-<div class="PageNavigation">
+<div class="page-break"></div>
+<div class="related">
+  <h2>Related Posts</h2>
+<ul>
+  {% for post in site.posts %}
+    {% if post.url != page.url %} 
+      {% for tag in page.tags %} 
+        {% if post.tags contains tag %}
+          <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a><br /></li>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</ul>
+</div>
+
+<div class="prevnext">
   {% if page.previous.url %}
-    <a class="prev" href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+    <a class="prevnext-item older" href="{{ site.url }}{{page.previous.url}}" title="{{ page.previous.title }}">Older</a>
+  {% else %}
+    <span class="prevnext-item older">Older</span>
   {% endif %}
   {% if page.next.url %}
-    <a class="next" href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+    <a class="prevnext-item older" href="{{ site.url }}{{page.next.url}}" title="{{ page.next.title }}">Newer</a>
+  {% else %}
+    <span class="prevnext-item older">Newer</span>
   {% endif %}
 </div>
 
+<div class="page-break"></div>
 
-
-
-<div id="disqus_thread"></div>
-<script>
-
-/**
- *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
- *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
-/*
-var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = '//https-vibrantabhi19-github-io.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<script src="/blog2/static/js/super-search.js"></script>
-
-                                    
+{% if site.disqus_shortname and page.comments == true %}<div id="disqus_thread"></div><!-- /#disqus_thread -->{% endif %}
