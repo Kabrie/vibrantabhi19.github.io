@@ -35,11 +35,11 @@ videocredit: tedtalks
 ---
 
 # Iris Data Set
-The Iris flower data set or Fisher's Iris data set is a multivariate data set introduced by Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis.
+The Iris flower data set or Fisher's Iris data set is a multivariate data set introduced by Ronald Fisher in his 1936 paper 'The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis'.
 
-This data sets consists of 3 different types of irises’ (Setosa, Versicolour, and Virginica) petal and sepal length, stored in a 150x4 numpy.ndarray
+This data sets consists of 3 different types of irises' (Setosa, Versicolour, and Virginica) petal and sepal length, stored in a 150x4 numpy.ndarray
 
-The rows being the samples and the columns being: Sepal Length, Sepal Width, Petal Length and Petal Width. The details of the Data set can be found [at](https://en.wikipedia.org/wiki/Iris_flower_data_set)
+The rows being the samples and the columns being: Sepal Length, Sepal Width, Petal Length and Petal Width. The details of the Data set can be found [Here](https://en.wikipedia.org/wiki/Iris_flower_data_set)
 
 <!--more-->
 
@@ -47,13 +47,12 @@ The rows being the samples and the columns being: Sepal Length, Sepal Width, Pet
 
 To analysize the Dataset we will follow the following set of procedure. Make sure you try and understand each of it.
 
-- **Import Dataset:** The first step is to import the Iris data set into our code. Fortunately, scikit-learn comes with this preloaded Dataset, so we just need to import it. Load the dataset form the official scikit learn website
-[visit](http://scikit-learn.org/stable/datasets/) 
+- **Import Dataset:** The first step is to import the Iris data set into our code. Fortunately, scikit-learn comes with this preloaded Dataset, so we just need to import it. Load the dataset form the official scikit learn website.
+[Scikit-learn docs](http://scikit-learn.org/stable/datasets/) 
 - **Train a classifier** Using the dataset, we will train a classifier.
 - **Predict label for new flower** We'll use the classifier to predict that what species of flower we have.
 - **Visualize the tree** Visualization of the tree using DecisionTreeClassifier class and DecisionTreeRegressor class.
 
-Most of these elements are styled by browsers with few modifications on our part.
 
 ## Import code and Understanding the Dataset
 
@@ -78,9 +77,8 @@ Now we have printed the features of the flower on the basis of which we are goin
 Now lets see the complete Data Set
 
 {% highlight python linenos%}
-
 for i in range (len(iris.target)):
-    print ("Examples %d: label %s, features %s" % (i, iris.target[i], iris.data [i]))
+  print ("Examples %d: label %s, features %s" % (i, iris.target, i], iris.data [i]))
 
 {% endhighlight %}
 
@@ -118,7 +116,7 @@ np.delete(name of array from where the data is to be deleted, the subarray that 
 We deleted 3 entries from our training data for testing. We created a decision tree and fit the training data into it. And then we checked that our training data is similar to the testing data or not
 
 
-#### Visualize the tree.
+## Visualize the tree.
 
 {% highlight python linenos%}
 from IPython.display import Image
@@ -126,16 +124,15 @@ dot_data = tree.export_graphviz(clf, out_file=None, feature_names=iris.feature_n
 graph = pydotplus.graph_from_dot_data(dot_data)
 Image(graph.create_png()) 
 
-// If we have pydotplus installed, 
-// we can generate a PDF file directly in Python:
-import pydotplus 
+// If we have pydotplus installed, we can generate a PDF file directly in Python:
+import pydotplus
 dot_data = tree.export_graphviz(clf, out_file=None)
 graph = pydotplus.graph_from_dot_data(dot_data)
-graph.write_pdf("iris.pdf") 
+graph.write_pdf("iris.pdf")
 {% endhighlight %}
 
 
-### Decision trees using DecisionTreeRegressor class:
+## Decision trees using DecisionTreeRegressor class:
 
 Decision trees can also be applied to regression problems, using the DecisionTreeRegressor class.
 
@@ -159,5 +156,12 @@ array([ 0.5]
 Refer to the following docs/videos for more information on how to apply Machine Learning to Iris Data Set.
 
 1: [scikit-learn Official docs](http://scikit-learn.org/stable/tutorial/index.html)
+
 2: [NumPy Official docs](https://docs.scipy.org/doc/numpy/reference/)
+
 3: [Google Developer Video on Machine Learning](https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal)
+
+Tip for beginner: Install jypyter notebook via [Anaconda](https://www.continuum.io/downloads), as it comes with almost all the preloaded libraries and stuff needed for learning basic Machine Learning concept.
+
+Feel free to drop a comment below for any queries/comments.
+Happy coding :)
