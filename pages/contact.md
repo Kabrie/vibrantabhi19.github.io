@@ -18,7 +18,7 @@ tags:
   - address
 ---
 
-| <i class="fa fa-twitter"></i> | [@{{ site.owner.twitter }}](https://twitter.com/abhi_kumar07)  | 
+| <i class="fa fa-twitter"></i> | https://twitter.com/abhi_kumar07  | 
 | - | :- |
 | <i class="fa fa-envelope"></i> | Abhishek Kumar<br>Room No 209A, Kailash Hostel<br>Shri Mata Vaishno Devi University, Kakrayal 182320<br>India   | 
 | - | :- |
