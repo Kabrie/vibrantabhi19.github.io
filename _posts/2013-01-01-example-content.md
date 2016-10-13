@@ -25,13 +25,11 @@ hide_printmsg: false
 # show post summary or full post in RSS feed.
 summaryfeed: false
 ## for twitter summary card with squared image and page description or page excerpt:
-# imagesummary: foo.png
+# imagesummary: {{ site.urlimg }}/avatar.jpg
 ## for twitter card with large image:
-# imagefeature: "http://img.youtube.com/vi/VEIrQUXm_hY/0.jpg"
+# imagefeature: {{ site.urlimg }}/media/iris.svg
 ## for twitter video card: (active for this page)
-videofeature: "https://www.youtube.com/embed/iG9CE55wbtY"
-imagefeature: "http://img.youtube.com/vi/iG9CE55wbtY/0.jpg"
-videocredit: tedtalks
+imagefeature: {{ site.urlimg }}/media/iris.svg
 ---
 
 # Iris Data Set
@@ -130,6 +128,9 @@ dot_data = tree.export_graphviz(clf, out_file=None)
 graph = pydotplus.graph_from_dot_data(dot_data)
 graph.write_pdf("iris.pdf")
 {% endhighlight %}
+
+
+[Iris Flower Dataset Visualization]({{ site.urlimg }}/media/iris.svg "Iris Dataset visualization")
 
 
 ## Decision trees using DecisionTreeRegressor class:
