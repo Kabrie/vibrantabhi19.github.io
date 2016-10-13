@@ -10,8 +10,8 @@ encoding: utf-8
 title:               My Website
 #tagline:             'foo's website
 description:         Foo's blog...
-url: https://github.com/vibrantabhi19.github.io
-baseurl: ""
+url: https://dyndna.github.io/lanyon-plus
+baseurl: "/lanyon-plus"
 urlimg: https://dyndna.github.io/lanyon-plus/images/
 markdown: kramdown
 paginate: 5
@@ -44,24 +44,24 @@ exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "l
 
 # About/contact
 author:
-  name:              Abhishek Kumar
-  url:               https://twitter.com/abhi_kumar07
-  avatar:         avatar.jpg
-  #email:           vibrantabhi19@gmail.com
+  name:              Foo Boo
+  url:               https://twitter.com/abcd
+  avatar:         foo.png
+  #email:           
 
 # Owner/author information
 owner:
-  name:           Abhishek Kumar
-  avatar:         avatar.jpg
-  #email:         vibrantabhi19@gmail.com 
+  name:           Foo Boo
+  avatar:         foo.png
+  #email:          
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        https://twitter.com/abhi_kumar07
-  facebook:       https://www.facebook.com/vibrantabhi
-  github:         https://www.github.com/vibrantabhi19
+  twitter:        abcd
+  facebook:       
+  github:         xyz123abc
   stackexchange:  
-  linkedin:       https://in.linkedin.com/in/abhishek-kumar-74299887
+  linkedin:       https://www.linkedin.com/in/foo
   instagram:      
   flickr:
   tumblr:  
@@ -108,6 +108,6 @@ disqus_shortname: foo
 #google_analytics:   xyz123abc
 
 #### For dummy website only - remove if you wish ####
-github_repo: https://github.com/vibrantabhi19/vibrantabhi19.github.io
+github_repo: https://github.com/dyndna/lanyon-plus
 version: 1.1.1
 ## END ##
