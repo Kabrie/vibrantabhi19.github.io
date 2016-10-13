@@ -5,7 +5,7 @@
     <description>This is my personal Blog/Portfolio</description>
     <link>https://vibrantabhi19.github.io/</link>
     <atom:link href="https://vibrantabhi19.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2016-10-13T13:46:40+05:30</updated>
+    <updated>2016-10-13T13:52:04+05:30</updated>
     <id>https://vibrantabhi19.github.io</id>
     <author>
       <name>Abhishek Kumar</name>
@@ -251,7 +251,7 @@ Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna m
 
 &lt;h3 id=&quot;embed-picture&quot;&gt;Embed picture&lt;/h3&gt;
 
-&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://dyndna.github.io/lanyon-plus/images//media/apple-icon.png&quot; alt=&quot;Toy example&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//media/apple-icon.png&quot; alt=&quot;Toy example&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;inline-css-attributes&quot;&gt;Inline css attributes&lt;/h3&gt;
 
