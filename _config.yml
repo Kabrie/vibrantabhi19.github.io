@@ -7,9 +7,9 @@ relative_permalinks: false
 encoding: utf-8
 
 # Setup
-title:               My Website
+title:               Hello. I'm Abhishek Kumar
 #tagline:             'foo's website
-description:         Foo's blog...
+description:         This is my personal Blog/Portfolio
 url: https://vibrantabhi19.github.io
 baseurl: ""
 urlimg: https://dyndna.github.io/lanyon-plus/images/
@@ -44,28 +44,25 @@ exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "l
 
 # About/contact
 author:
-  name:              Foo Boo
-  url:               https://twitter.com/abcd
-  avatar:         foo.png
-  #email:           
+  name:              Abhishek Kumar
+  url:               https://twitter.com/abhi_kumar07
+  avatar:         avatar.jpg
+  email:           vibrantabhi19@gmail.com
 
 # Owner/author information
 owner:
-  name:           Foo Boo
-  avatar:         foo.png
+  name:           Abhishek Kumar
+  avatar:         avatar.jpg
   #email:          
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
   description:
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        abcd
-  facebook:       
-  github:         xyz123abc
-  stackexchange:  
-  linkedin:       https://www.linkedin.com/in/foo
-  instagram:      
-  flickr:
-  tumblr:  
-  google_plus:    https://plus.google.com/+foo
+  twitter:        https://twitter.com/abhi_kumar07/abhi_kumar07
+  facebook:       https://www.facebook.com/vibrantabhi
+  github:         https://github.com/vibrantabhi19 
+  linkedin:       https://www.linkedin.com/in/abhishek-kumar-74299887
+  instagram:      https://www.instagram.com/abhishektiwari07/
+  google_plus:    https://plus.google.com/+AbhishekKumarTiwari07
   # orcid and google scholar IDs are different than standard username.
   orcid: xyz123abc
   gscholar: xyz123abc
@@ -83,13 +80,11 @@ links:
     url: /tags/
   - title: <i class="fa fa-archive"></i> Archive
     url: /archive/
-  - title: <i class="iconside iconm-wordpress"></i> Old Blog
-    url: https://foo.wordpress.com
     external: true
   - title: <i class="iconside iconm-envelop"></i> Contact
     url: /contact/
-  - title: <i class="iconside iconm-twitter"></i> Twitter
-    url: https://twitter.com/abcd
+  - title: <i class="iconside iconm-twitter"></i> Follow me on
+    url: https://twitter.com/abhi_kumar07
     external: true
   - title: <i class="iconside iconm-feed2"></i> Feed
     url: /feed.xml
@@ -102,12 +97,12 @@ links:
 #twitter_widget_id: xyz123abc
 
 # Add disqus username for Disqus comment board:
-disqus_shortname: foo
+disqus_shortname: disqus_QKNhMpQgvs
 
 # Analytics and webmaster tools stuff goes here
 #google_analytics:   xyz123abc
 
 #### For dummy website only - remove if you wish ####
-github_repo: https://github.com/dyndna/lanyon-plus
+github_repo: https://github.com/vibrantabhi19
 version: 1.1.1
 ## END ##

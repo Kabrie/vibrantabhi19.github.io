@@ -1,10 +1,10 @@
 ---
 layout: page
-title: About
+title: Hello. I'm Abhishek
 permalink: /about/
 show_meta: true
 # imagefeature path is relative to images/ directory.
-imagefeature: foo.png
+imagefeature: avatar.jpg
 published: true
 description: "About example.com...."
 category: views
@@ -17,8 +17,10 @@ sitemap:
     lastmod: 2016-02-13
 # tags will be used as html meta keywords.    
 tags:
-  - "foo boo"
-  - "city tx"
+  - "Abhishek Kumar"
+  - "About"
+  - "Abhishek Kumar Tiwari"
+  - "Contact"
 ---
 
 <div class="post-author text-center">                       
@@ -30,12 +32,15 @@ tags:
 </span>
 </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ornare lectus a purus rutrum, a hendrerit quam condimentum. Donec vel ante maximus, vulputate libero ac, rhoncus justo. Phasellus purus nisl, auctor id tristique eu, maximus quis leo. Mauris ultricies ante quis vehicula accumsan. Nulla facilisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi elit, feugiat non scelerisque eget, ultrices nec est. Morbi a est iaculis, commodo quam congue, posuere quam. Phasellus venenatis finibus eros, vitae malesuada nisl gravida vitae.
+I am a Open Source enthusiast and a Computer Science undergraduate currently studing in final year in Shri Mata Vaishno Devi University, Katra, India.
 
-Praesent ac sem quis diam fermentum fermentum. Nullam turpis metus, elementum sit amet venenatis sed, placerat eget erat. Ut convallis ipsum vitae volutpat tristique. Cras a tempor lorem, quis aliquet dui. Nunc vel leo erat. Donec posuere massa sed justo luctus, accumsan porttitor ligula laoreet. Suspendisse sit amet nisi ultrices, venenatis lorem vel, posuere turpis. Fusce eget dictum nisi. Proin eu diam nisi. Quisque ut quam quis sem tincidunt efficitur vitae nec ex. Pellentesque ut dolor eros. Ut faucibus semper ultricies. Vestibulum nec nisl in magna porttitor dictum.
+I was always fascinated by the idea of BigData, Machine learning and AI in general. the concept that ‘Machine can think?’ had a great impact and made me to dig dipper into the subject. My research interest and orientation is greatly inspired by the recent activities around the globe in the domain of AI, I have tried to keep myself directed to the research areas which seem to have the potential of solving Machine intelligence.
 
-Donec egestas eros arcu, id fermentum orci faucibus ac. Pellentesque facilisis elit eu tellus ultrices pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ut eros et mi dapibus condimentum. Sed ante metus, porttitor ut aliquet vitae, ullamcorper quis ex. Donec ac efficitur arcu, a malesuada dolor. Nulla magna arcu, semper quis augue sed, rhoncus porta urna. Duis dictum dapibus diam, ac sodales ipsum lobortis vel. Nulla ac dictum metus. Morbi sollicitudin tortor eu diam tristique, ut tincidunt tortor euismod. Integer non tincidunt metus. In tempus sem dapibus, venenatis mi placerat, condimentum orci. Nunc et tellus diam.
+I am currently working on supervised, unsupervised and reinforcement machine learning algorithms, I haveused these techniques for clustering, classification and prediction. I am also working to understand the various Python libraries such as NumPy, SyPy, scikit-learn, Pandas and TensorFLow for a better understanding of the data and how it can be visualized and results can be inferred from that.
 
-Nam imperdiet consequat lorem. Donec sagittis tortor eu dolor efficitur ullamcorper. Pellentesque dolor arcu, vestibulum quis laoreet at, tincidunt nec mauris. Praesent id laoreet arcu. Quisque blandit nunc at elit auctor, eget tempor nunc sodales. Cras venenatis lacinia tempus. Proin erat nisl, pharetra a massa volutpat, rhoncus pellentesque nisi. Mauris in elit dictum, egestas tellus et, laoreet velit. Nam auctor tempus augue sit amet fermentum. Nulla accumsan arcu quis efficitur aliquam. Nulla dapibus in neque eget facilisis. Nullam nisi augue, maximus at lectus sit amet, ornare malesuada ante. Morbi volutpat justo a urna pharetra elementum. Proin tempor ac felis ac consequat. Proin feugiat, nulla ac sagittis consequat, ante diam auctor tortor, in suscipit leo ante id dolor. Vivamus posuere pellentesque magna, sagittis blandit neque convallis sed.
+Having gained a lot from Open Source World and also have worked as a Web Developer in my initial years, I always try to do my bit by contributing back, mainly on [Github](https://github.com/vibrantabhi19) and by spreading the word about FOSS.
 
-*[volutpat]: Tooltip for abbreviation.
+I am always looking out for better research and career opportunities and projects in the field of in the field of my interest and research areas. Feel free to get in touch. [contact page](/contact/).
+
+Have a Happy day ahead :)
+

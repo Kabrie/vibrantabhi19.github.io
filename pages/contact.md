@@ -13,18 +13,16 @@ sitemap:
     changefreq: 'monthly'
     lastmod: 2016-02-13
 tags:
-  - "foo boo"
-  - "driving directions"
+  - "Abhishek Kumar"
+  - "Contact details"
   - address
 ---
 
 | <i class="fa fa-twitter"></i> | [@{{ site.owner.twitter }}](https://twitter.com/{{ site.owner.twitter }})  | 
 | - | :- |
-| <i class="fa fa-envelope"></i> | foo<br>XYZ<br>1234 ABC ST<br>Washington, DC 11111   | 
+| <i class="fa fa-envelope"></i> | Abhishek Kumar<br>Room No 209A, Kailash Hostel<br>Shri Mata Vaishno Devi University, Kakrayal 182320<br>India   | 
 | - | :- |
-| <i class="fa fa-car"></i>  | [Driving directions]({{ site.url }}/directions) | 
-| - | :- |
-| <i class="fa fa-paper-plane">  | foo@xyz | 
+| <i class="fa fa-paper-plane">  | vibrantabhi19@gmail.com | 
 | - | :- |
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.owner.twitter }}" data-size="small" data-dnt="true">Tweet</a> <a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
@@ -48,6 +46,4 @@ tags:
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 </script>
 </div>
-{% else %}
-Twitter stream will show up here if `twitter_widget_id` is present is `_config.yml`
-{% endif %}
+

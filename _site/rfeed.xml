@@ -3,12 +3,12 @@
   <channel>
     <title>My Website</title>
     <description>Foo's blog...</description>
-    <link>https://dyndna.github.io/lanyon-plus/lanyon-plus/</link>
-    <atom:link href="https://dyndna.github.io/lanyon-plus/lanyon-plus/rfeed.xml" rel="self" type="application/rss+xml" />
-    <updated>2016-10-13T05:22:02+05:30</updated>
-    <id>https://dyndna.github.io/lanyon-plus</id>
+    <link>https://vibrantabhi19.github.io/</link>
+    <atom:link href="https://vibrantabhi19.github.io/rfeed.xml" rel="self" type="application/rss+xml" />
+    <updated>2016-10-13T10:57:38+05:30</updated>
+    <id>https://vibrantabhi19.github.io</id>
     <author>
-      <name>Abhishek Kumar</name>
+      <name>Foo Boo</name>
     </author>
     
   </channel>

@@ -3,7 +3,7 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/blog/2015/01/31/whats-jekyll/</loc>
+      <loc>https://vibrantabhi19.github.io/blog/2015/01/31/whats-jekyll/</loc>
       
         <lastmod>2015-01-31T00:00:00+05:30</lastmod>
       
@@ -18,7 +18,7 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/blog/2013/01/01/example_content/</loc>
+      <loc>https://vibrantabhi19.github.io/blog/2013/01/01/example_content/</loc>
       
         <lastmod>2013-01-01T00:00:00+05:30</lastmod>
       
@@ -36,7 +36,7 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/about/</loc>
+      <loc>https://vibrantabhi19.github.io/about/</loc>
       
         <lastmod>2016-02-13</lastmod>
       
@@ -51,7 +51,7 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/about/aoi/</loc>
+      <loc>https://vibrantabhi19.github.io/about/aoi/</loc>
       
         <lastmod>2016-02-13</lastmod>
       
@@ -66,9 +66,9 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/archive/</loc>
+      <loc>https://vibrantabhi19.github.io/archive/</loc>
       
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -81,7 +81,7 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/contact/</loc>
+      <loc>https://vibrantabhi19.github.io/contact/</loc>
       
         <lastmod>2016-02-13</lastmod>
       
@@ -98,7 +98,7 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/cv/</loc>
+      <loc>https://vibrantabhi19.github.io/cv/</loc>
       
         <lastmod>2016-02-13</lastmod>
       
@@ -113,86 +113,9 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/disclosure/</loc>
+      <loc>https://vibrantabhi19.github.io/disclosure/</loc>
       
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-    <url>
-      <loc>https://dyndna.github.io/lanyon-plus/feed.xml</loc>
-      
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://dyndna.github.io/lanyon-plus/humans.txt</loc>
-      
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://dyndna.github.io/lanyon-plus/blog/</loc>
-      
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://dyndna.github.io/lanyon-plus/</loc>
-      
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://dyndna.github.io/lanyon-plus/links.jsonp</loc>
-      
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -207,7 +130,84 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/about/publications/</loc>
+      <loc>https://vibrantabhi19.github.io/feed.xml</loc>
+      
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://vibrantabhi19.github.io/humans.txt</loc>
+      
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://vibrantabhi19.github.io/blog/</loc>
+      
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://vibrantabhi19.github.io/</loc>
+      
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://vibrantabhi19.github.io/links.jsonp</loc>
+      
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+  
+    
+    <url>
+      <loc>https://vibrantabhi19.github.io/about/publications/</loc>
       
         <lastmod>2016-02-13</lastmod>
       
@@ -224,24 +224,9 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/readme/</loc>
+      <loc>https://vibrantabhi19.github.io/readme/</loc>
       
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>https://dyndna.github.io/lanyon-plus/resume/</loc>
-      
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -254,9 +239,24 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/rfeed.xml</loc>
+      <loc>https://vibrantabhi19.github.io/resume/</loc>
       
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://vibrantabhi19.github.io/rfeed.xml</loc>
+      
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -271,9 +271,9 @@
   
     
     <url>
-      <loc>https://dyndna.github.io/lanyon-plus/sitemap.xml</loc>
+      <loc>https://vibrantabhi19.github.io/sitemap.xml</loc>
       
-        <lastmod>2016-10-13T05:22:02+05:30</lastmod>
+        <lastmod>2016-10-13T10:57:38+05:30</lastmod>
       
       
         <changefreq>monthly</changefreq>
