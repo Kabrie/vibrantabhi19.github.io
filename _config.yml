@@ -10,8 +10,8 @@ encoding: utf-8
 title:               My Website
 #tagline:             'foo's website
 description:         Foo's blog...
-url: https://github.com/vibrantabhi19/vibrantabhi19.github.io
-baseurl: "/lanyon-plus"
+url: https://github.com/vibrantabhi19.github.io
+baseurl: ""
 urlimg: https://dyndna.github.io/lanyon-plus/images/
 markdown: kramdown
 paginate: 5
