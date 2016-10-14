@@ -2,12 +2,12 @@ callback([
 
   {
     "text": "What's Jekyll?",
-    "href": "https://vibrantabhi19.github.io/blog/2015/01/31/whats-jekyll/"
+    "href": "http://localhost:4000/blog/2015/01/31/whats-jekyll/"
   } ,
 
   {
     "text": "Iris Flower DataSet: Visualizing a Decision Tree",
-    "href": "https://vibrantabhi19.github.io/blog/2016/10/13/Iris-dataset-solution/"
+    "href": "http://localhost:4000/blog/2016/10/13/Iris-dataset-solution/"
   } 
 
 ])

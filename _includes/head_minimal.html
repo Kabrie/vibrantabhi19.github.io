@@ -37,6 +37,11 @@
 <!-- Add-on CSS to override system-wide defaults -->
 <link rel="stylesheet" href="{{ site.baseurl }}/public/css/addon.css">
 
+<!-- Super-search CSS file -->
+{% if site.super_search %}
+<link rel="stylesheet" href="{{ site.baseurl }}/public/css/super-search.css">
+{% endif %}
+
 <!-- CSS override per page -->
 {% if page.style %}
    <style type="text/css">

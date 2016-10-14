@@ -103,6 +103,9 @@ disqus_shortname: disqus_QKNhMpQgvs
 # Analytics and webmaster tools stuff goes here
 #google_analytics:   xyz123abc
 
+# Enable Super-Search.
+super_search: true
+
 #### For dummy website only - remove if you wish ####
 github_repo: https://github.com/vibrantabhi19
 version: 1.1.1
