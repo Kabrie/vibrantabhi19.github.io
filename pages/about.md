@@ -42,4 +42,4 @@ Having gained a lot from Open Source World and also have worked as a Web Develop
 I am always looking out for better research and career opportunities and projects in the field of in the field of my interest and research areas. Feel free to get in touch. [contact page](/contact/).
 
 Have a Happy day ahead :)
-
+<a href="https://twitter.com/abhi_kumar07" class="twitter-follow-button" data-show-count="false">Follow @abhi_kumar07</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
