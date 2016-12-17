@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<!--  
+====================================================
+Homepage: https://vibrantabhi19.github.io
+Credits: https://vibrantabhi19.github.io/disclosure
+====================================================
+-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<!-- link href="http://gmpg.org/xfn/11" rel="profile" -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<!-- Enable responsiveness on mobile devices-->
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<title>
+  
+    An insight into Neural network's Activation functions · Hello. I'm Abhishek Kumar
+  
+</title>
+
+<!-- Search Engine Optimization -->
+<meta name="description" content="Are you a beginner in Neural Network confused about which activation function you should use, well here is a breif of the common activation functions that are used in Neural Network.">
+<meta name="keywords" content="Activation Function, Neural Network, Sigmoid, Tanh, Relu, Maxout, Leaky Relu">
+
+
+
+
+<!-- Twitter Cards -->
+  
+  
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@abhi_kumar07/">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/600px-ArtificialNeuronModel_english.png">
+
+
+
+<meta name="twitter:title" content="An insight into Neural network's Activation functions">
+<meta name="twitter:description" content="Are you a beginner in Neural Network confused about which activation function you should use, well here is a breif of the common activation functions that are used in Neural Network.">
+<meta name="twitter:creator" content="@abhi_kumar07/">
+<!-- End Twitter Cards -->
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An insight into Neural network's Activation functions">
+<meta property="og:description" content="Are you a beginner in Neural Network confused about which activation function you should use, well here is a breif of the common activation functions that are used in Neural Network.">
+<meta property="og:url" content="https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/">
+<meta property="og:site_name" content="Hello. I'm Abhishek Kumar">
+
+  
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ArtificialNeuronModel_english.png/600px-ArtificialNeuronModel_english.png">
+
+<meta property="fb:app_id" content="1003108156422006">
+<meta property="fb:admins" content="817465054">
+
+<!-- Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400%7CTangerine%7CInconsolata">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/public/css/iconmoon.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/public/css/style.min.css">
+
+<!-- Add-on CSS to override system-wide defaults -->
+<link rel="stylesheet" href="/public/css/addon.css">
+
+<!-- Super-search CSS file -->
+
+<link rel="stylesheet" href="/public/css/super-search.css">
+
+
+<!-- CSS override per page -->
+
+
+<!-- Java scripts -->
+<!-- <script src="/public/js/jquery.min.js"></script> -->
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="https://vibrantabhi19.github.io/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="https://vibrantabhi19.github.io/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-144x144-precomposed.png">
+<!-- 180x180 (precomposed) for iPhone 6 -->
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://vibrantabhi19.github.io/images/icons/apple-touch-icon-180x180.png">
+<!-- 192x192 (precomposed) for Android -->
+<link rel="icon" type="image/png" sizes="192x192" href="https://vibrantabhi19.github.io/images/icons/android-icon-192x192.png">
+
+
+<link rel="canonical" href="https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/">
+<link rel="author" href="https://plus.google.com/+AbhishekKumarTiwari07?rel=author">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://vibrantabhi19.github.io/feed.xml">
+
+
+  <!--Load Mathjax-->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script>
+        MathJax.Hub.Config({
+            config: ["MMLorHTML.js"],
+            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+            jax: ["input/TeX"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: false
+            },
+            TeX: {
+                TagSide: "right",
+                TagIndent: ".8em",
+                MultLineWidth: "85%",
+                equationNumbers: {
+                   autoNumber: "AMS",
+                },
+                unicode: {
+                   fonts: "STIXGeneral,'Arial Unicode MS'" 
+                }
+            },
+            showProcessingMessages: false
+        });
+    </script>
+
+<!-- <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'], ['\(', '\)'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+
+
+
+</head>
+
+
+<body>
+
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+<!--   <div class="sidebar-item">
+    <p>This is my personal Blog/Portfolio</p>
+  </div> -->
+
+  <nav class="sidebar-nav">
+    <!-- a class="sidebar-nav-item" href="/">Home</a-->
+
+    
+
+    
+
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/"><i class="iconside iconm-home"></i> Home</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/about/"><i class="iconside iconm-user"></i> About</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/blog/"><i class="iconside iconm-quill"></i> Blog</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/tags/"><i class="fa fa-tags"></i> Tags</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="/archive/" target="_blank"><i class="fa fa-archive"></i> Archive</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/contact/"><i class="iconside iconm-envelop"></i> Contact</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://twitter.com/abhi_kumar07" target="_blank"><i class="iconside iconm-twitter"></i> Follow me on</a>
+                
+    
+            
+                    <a class="sidebar-nav-item" href="https://vibrantabhi19.github.io/feed.xml"><i class="iconside iconm-feed2"></i> Feed</a>
+                
+         
+
+  </nav>
+
+<hr class="gh">
+
+﻿
+Looking for something? Just press `ESC` or type '/' to start Search.
+</div>
+
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Hello. I'm Abhishek Kumar</a>
+            <!-- <small></small> -->
+            <div class="headicons">
+              <small><a href="https://vibrantabhi19.github.io/about" rel="me" title="About"><i class="iconm iconm-user"></i></a></small>
+              <small><a href="https://vibrantabhi19.github.io/blog" rel="me" title="Blog"><i class="iconm iconm-quill"></i></a></small>
+              <small><a href="https://vibrantabhi19.github.io/contact" rel="me" title="Contact"><i class="iconm iconm-envelop"></i></a></small> 
+            </div>           
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 itemprop="name" class="post-title">An insight into Neural network's Activation functions</h1>
+  <span class="post-date" itemprop="datePublished" content="2016-12-17"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" itemprop="url" title="Permanent link to this post">17 Dec 2016</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="Activation Function, Neural Network, Sigmoid, Tanh, Relu, Maxout, and Leaky Relu"><i class="fa fa-tags" title="page tags"></i> <a href="https://vibrantabhi19.github.io/tags/#Activation+Function" title="Pages tagged Activation Function" rel="tag">Activation Function</a> •  <a href="https://vibrantabhi19.github.io/tags/#Neural+Network" title="Pages tagged Neural Network" rel="tag">Neural Network</a> •  <a href="https://vibrantabhi19.github.io/tags/#Sigmoid" title="Pages tagged Sigmoid" rel="tag">Sigmoid</a> •  <a href="https://vibrantabhi19.github.io/tags/#Tanh" title="Pages tagged Tanh" rel="tag">Tanh</a> •  <a href="https://vibrantabhi19.github.io/tags/#Relu" title="Pages tagged Relu" rel="tag">Relu</a> •  <a href="https://vibrantabhi19.github.io/tags/#Maxout" title="Pages tagged Maxout" rel="tag">Maxout</a> •  <a href="https://vibrantabhi19.github.io/tags/#Leaky+Relu" title="Pages tagged Leaky Relu" rel="tag">Leaky Relu</a></span>
+    
+      <span class="social-icons"><a href="https://twitter.com/share?text=An%20insight%20into%20Neural%20network's%20Activation%20functions&amp;url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/&amp;via=abhi_kumar07/" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+<a class="fa fa-facebook" href="https://facebook.com/sharer.php?u=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+<a href="https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/#disqus_thread" class="social-icons" title="Comments"><i class="fa fa-comments"></i></a>
+
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
+    
+  <h1 id="a-bit-of-introduction">A bit of Introduction</h1>
+
+<p class="text-center"><img src="https://vibrantabhi19.github.io/images//simple-neuron.png" alt="Structure of a simple neuron" title="Toy example"></p>
+
+<p>The basic building block of a neural network is a processing-unit which is linked to n input-units through a set of n directed connections. The single unit model is characterized by:</p>
+
+<ul>
+  <li>A threshold input value denoted by : x<sub>i</sub>.</li>
+  <li>A univariate activation function denoted in the figure</li>
+  <li>A vector of “weights,” denoted by w<sub>ij</sub>
+</li>
+  <li>And ofcourse the output value.</li>
+</ul>
+
+<p>But for better understanding lets discuss very briefly the biological system from which a large portion of this area has been inspired b</p>
+
+<p class="text-center"><img src="https://vibrantabhi19.github.io/images//neuron.png" alt="A image of a biological neuron" title="Toy example"></p>
+
+<p class="text-center"><img src="https://vibrantabhi19.github.io/images//neuron_model.png" alt="A mathematical model of a Neuron" title="Toy example"></p>
+
+<p>The basic computational unit of the brain is a neuron. Approximately 86 billion neurons can be found in the human nervous system and they are connected with approximately 10^14 - 10^15 synapses. The diagram below shows a cartoon drawing of a biological neuron (left) and a common mathematical model (right). Each neuron receives input signals from its dendrites and produces output signals along its (single) axon. The axon eventually branches out and connects via synapses to dendrites of other neurons. In the computational model of a neuron, the signals that travel along the axons (e.g. x<sub>0</sub>) interact multiplicatively (e.g. w<sub>0</sub>x<sub>0</sub>) with the dendrites of the other neuron based on the synaptic strength at that synapse (e.g. w<sub>0</sub>).</p>
+
+<p>The idea is that the synaptic strengths (the weights w) are learnable and control the strength of influence (and its direction: excitory (positive weight) or inhibitory (negative weight)) of one neuron on another. In the basic model, the dendrites carry the signal to the cell body where they all get summed. If the final sum is above a certain threshold, the neuron can fire, sending a spike along its axon. In the computational model, we assume that the precise timings of the spikes do not matter, and that only the frequency of the firing communicates information. Based on this rate code interpretation, we model the firing rate of the neuron with an activation function f, which represents the frequency of the spikes along the axon.</p>
+
+<p>So, in simple words a Activation fucntion of a node in terms of Neural Network defines the output of the node, given a set of predetermined inputs.</p>
+
+<h1 id="history-of-activation-function">History of Activation function.</h1>
+
+<p>The Mark 1 Perceptron machine was the first implementation of the perceptron algorithm, the first learning algorithm for neural network. This machine used a unit step function as a kind of “Activation Function”(No such term existed at that time.) But there was no concept of loss function and no concept of back propagation.
+Then in late 60’s a paper came out titled <a href="http://isl-www.stanford.edu/~widrow/papers/bc1995perceptronsadalines.pdf">“Perceptrons, Adalines and Backpropagation”</a>. This was the first multi layer perceptron network. Then in 1986 a research paper by Rumelhart came them emphasised the use of back propagation and after this the concept of back propagation became very popular, the paper also talked about loss function so this was a major advacement in Neural Network.
+After this the domain of Neural Network remained quite for many many years. Though many small development took place in these year but it was late 2000’s that boosted the world of Neural Network.
+Here are links of some research paper that happened in the 2000’s, (espically have a look at the Microsoft reasearch paper of 2012)</p>
+
+<h1 id="commonly-used-activation-function">Commonly used Activation Function:</h1>
+
+<h2 id="sigmoid-activation-function"><strong>Sigmoid activation function</strong></h2>
+<p>A sigmoid function has a vast history and for a very long period of time Sigmoid was used and preferred over the rest it had a nice interpretation as the firing rate of a neuron. The sigmoid is a mathematical function having an “S” shaped curve (sigmoid curve). Often, sigmoid function refers to the special case of the logistic function shown in the first figure and defined by the formula</p>
+
+<div>
+$$
+\begin{align*}
+  &amp; {\displaystyle S(t)={\frac {1}{1+e^{-t}}}.}
+\end{align*}
+$$
+</div>
+
+<p>The sigmoid non-linearity has the mathematical form <script type="math/tex">% <![CDATA[
+\begin{align*} & \sigma(x) = 1/(1+e^{-x}) \end{align*} %]]></script> and is shown in the image above on the left.</p>
+
+<p>The sigmoid function takes a real-valued number and “squashes” it into range between 0 and 1. And this “Squasing” technique is one of the major drawbacks of the sigmoid function. In particular, large negative numbers become 0 and large positive numbers become 1. Lets see the major drawback of the Sigmoid activation function in detail:</p>
+
+<ul>
+  <li>
+    <p><strong>Sigmoids saturate and kill gradients:</strong> I just mentioned that the sigmoid function squashes a number in the range of 0 and 1 and as a result the neuron’s activatiobn saturates at wither 1 or 0. See the sigmoid curve once again, at large positive negative values the gradient is almost 0. Now during Backpropagation this gradients are supposed to be multiplied by the local gradient at each neuron and in this case the output of backpropagation will almost come out to be 0 (due to very small gradient value). Therefore, if the local gradient is very small, it will effectively “kill” the gradient and almost no signal will flow through the neuron to its weights and recursively to its data.</p>
+  </li>
+  <li>
+    <p><strong>Sigmoid outputs are not zero-centered:</strong> Many a times (almost everytime) it happens that the neuron recieves data thaat is not zero-centered. In that case if the data coming into the neuron is always positive, the gradient on the weights ‘w’ will always be either positive or all negative during backpropogation(depending upon the gradient). Due to this the gradient updates will be very random (zig-zag shape to be precise) which is very undesirable.</p>
+  </li>
+  <li>
+    <p><strong>Slow convergence:</strong> THe sigmoid activation function has a very slow convergence. So the initialization of the weights become very important if we are using the sigmoid activation function. (The reason can be infered from the above two points), if the initial weights are too large then most of the neurons would saturate and the network will barely learn. (Tip: Start with a very small ‘w’)</p>
+  </li>
+  <li>
+    <p><strong>Expensive:</strong> The sigmoid function uses the exponential function, which is computationally expensive as compared to other activation functions.</p>
+  </li>
+</ul>
+
+<p>Here is a toy example of an implementation of Sigmoid</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table style="border-spacing: 0"><tbody><tr>
+<td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></td>
+<td class="code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c"># sigmoid function with forward and back prop</span>
+<span class="k">def</span> <span class="nf">nonlin</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">deriv</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">deriv</span><span class="o">==</span><span class="bp">True</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+    
+<span class="c"># input dataset</span>
+<span class="c"># feel free to play with the imput dataset</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+                <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="p">])</span>
+    
+<span class="c"># output dataset            </span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span><span class="o">.</span><span class="n">T</span>
+
+<span class="c"># seed random numbers to make calculation</span>
+<span class="c"># deterministic (just a good practice)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c"># initialize weights randomly with mean 0</span>
+<span class="n">syn0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="nb">iter</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+
+    <span class="c"># forward propagation</span>
+    <span class="n">l0</span> <span class="o">=</span> <span class="n">X</span>
+    <span class="n">l1</span> <span class="o">=</span> <span class="n">nonlin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">l0</span><span class="p">,</span><span class="n">syn0</span><span class="p">))</span>
+
+    <span class="c"># how much did we miss?</span>
+    <span class="n">l1_error</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">l1</span>
+
+    <span class="c"># multiply how much we missed by the </span>
+    <span class="c"># slope of the sigmoid at the values in l1</span>
+    <span class="n">l1_delta</span> <span class="o">=</span> <span class="n">l1_error</span> <span class="o">*</span> <span class="n">nonlin</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span><span class="bp">True</span><span class="p">)</span>
+
+    <span class="c"># update weights</span>
+    <span class="n">syn0</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">l0</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">l1_delta</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="s">"Output After Training:"</span>
+<span class="k">print</span> <span class="n">l1</span><span class="w">
+</span></pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p><strong>Verdict:</strong> Don’t ever use Sigmoid, never ever, never ever ever….</p>
+
+<h2 id="tanh-activation-function"><strong>Tanh Activation function</strong></h2>
+
+<p>The tanh non-linearity is shown on the image below. Tanh is nothing but <script type="math/tex">% <![CDATA[
+\begin{align*} & \textrm{tanh}(x) = 2\sigma(2x) - 1 \end{align*} %]]></script>. Tanh came into the picture with the goal of answering one of the problem of Sigmoid activation function(Point no 2 of Sigmoid). It is zero-centered and squashes a real-valued number to the range [-1, 1]. Like the sigmoid neuron, its activations saturate, but unlike the sigmoid neuron its output is zero-centered. Although tanh activation function is nothing but 2*sigmoid - 1, but for a better understanding of the advantages of tanh you can have a look at <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf">this paper</a></p>
+
+<p class="text-center"><img src="https://vibrantabhi19.github.io/images//tanh.png" alt="A tanh graph, see the range [-1, 1]" title="Toy example"></p>
+
+<p><strong>Verdict:</strong> Always prefer tanh non-linearity over the sigmoid nonlinearity. But you should avoid using Tanh too. (as there are more problems to be addressed to)</p>
+
+<h2 id="relu-activation-function"><strong>ReLU Activation function</strong></h2>
+
+<p>The Rectified Linear Unit is one of the most popular and widely used activation function. The ReLU is a simple thresholding functoion f(x)=max(0,x). Lets see the pros and cons of the ReLU activation function.</p>
+
+<ul>
+  <li>
+    <p><strong>Faster Convergence rate:</strong> The convergence of the gradient is accelerated by a factor of 6 as compared to the sigmoid/tanh functions. It is argued that this is due to its linear, non-saturating form.</p>
+  </li>
+  <li>
+    <p><strong>Computattionaly cheap:</strong> The ReLU activation function simply thresholds the input so it is computationally very cheap.
+Gradient kill or Dying ReLU: As you can see that the ReLU is 0 for all negative values so it is possible that a large gradient flowing through the unit can never get activated and remain ‘dead’ for the whole time, this is alsi referred to as the ‘dying ReLU’ problem. So the ReLU units can be fragile during training and can “die”. Though we can tackle this problem to some extend with proper setting of the Learning rate. <a href="https://arxiv.org/pdf/1611.01491v3.pdf">Understanding Deep Neural Networks with Rectied Linear Units</a> gives a better insight into the Relu networks.</p>
+  </li>
+  <li>
+    <p>The RelU activation function is also non-zero centered.</p>
+  </li>
+</ul>
+
+<p class="text-center"><img src="https://vibrantabhi19.github.io/images//relu.png" alt="A Relu graph" title="Toy example"></p>
+
+<p><strong>Verdict:</strong> If you are a beginner in Neural Network then the ReLU activation function should be your default choice.</p>
+
+<h2 id="leaky-relu-activation-function"><strong>Leaky ReLU Activation function</strong></h2>
+
+<p>ReLu activation function had this major “dying ReLU” problem and the leaky ReLUs are one attempt to fix the “dying ReLU” problem. Here for all negative values of x (x &lt; 0), the leaky ReLU have a very small negative slope. That is, the function computes f(x)=𝟙(x&lt;0)(αx)+𝟙(x&gt;=0)(x)
+where α is a small constant. In some problems this activation function works wonder but it is not always very consistant. You are more than encouraged to try this on your own.
+Interesting Point: The constant α can also be made as one of the parameter of each neuron and this can be learned by the network. Such editing are also termed as PReLU neurons, you can see a lot more about this in <a href="https://arxiv.org/pdf/1502.01852.pdf">Delving Deep into Rectifiers, by Kaiming He et al., 2015</a>. (Warning: It has 3 pages of mathamatical derivation)</p>
+
+<h2 id="maxout"><strong>Maxout</strong></h2>
+
+<p>Other types of units have been proposed that do not have the functional form f(wTx+b)
+where a non-linearity is applied on the dot product between the weights and the data. One relatively popular choice is the Maxout neuron (introduced recently by Goodfellow et al.) that generalizes the ReLU and its leaky version. The Maxout neuron computes the function max(wT1x+b1,wT2x+b2). Notice that both ReLU and Leaky ReLU are a special case of this form (for example, for ReLU we have w1,b1=0). The Maxout neuron therefore enjoys all the benefits of a ReLU unit (linear regime of operation, no saturation) and does not have its drawbacks (dying ReLU). However, unlike the ReLU neurons it doubles the number of parameters for every single neuron, leading to a high total number of parameters. Also you need to have a bit of knowledge about Dropouts for implementing Maxout. Here is a <a href="https://arxiv.org/pdf/1302.4389v4.pdf">paper</a> on maxout activation function.</p>
+
+<h1 id="conclusion">Conclusion:</h1>
+
+<p>There is always this question/doubt that every beginner Neural Network enthusiast has is “What activation function should I use?”. I would say there is always this perfect amalgamation between the type of network and the activation function and its a mix and match stuff butthe default choice should always be ReLU non-linearity but we have to be very carefull about the dying unit problem. Also you are welcomed to experiment on the Leaky ReLU or the Maxout activation function, these activation function may give you better reults but they have not established themselves in the industry. You can also try out Tanh but the reults would be worse. Sigmoid? Seriously, are you even considering using Sigmoid? If yes, Go ahead and test it :P</p>
+
+<h3 id="references">References</h3>
+
+<p>Want to see something else added? <a href="https://github.com/dyndna/lanyon-plus/issues/new">Open an issue.</a> Feel free to contribute.</p>
+
+  <hr>
+  
+  <span class="post-date metafoot" itemprop="datePublished" content="2016-12-17"><i class="fa fa-calendar" title="Date published"> <a class="permalink" href="https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" itemprop="url" title="Permanent link to this post">17 Dec 2016</a> </i></span>
+  
+  <span class="post-tags" itemprop="keywords" content="Activation Function, Neural Network, Sigmoid, Tanh, Relu, Maxout, and Leaky Relu"><i class="fa fa-tags" title="page tags"></i> <a href="https://vibrantabhi19.github.io/tags/#Activation+Function" title="Pages tagged Activation Function" rel="tag">Activation Function</a> •  <a href="https://vibrantabhi19.github.io/tags/#Neural+Network" title="Pages tagged Neural Network" rel="tag">Neural Network</a> •  <a href="https://vibrantabhi19.github.io/tags/#Sigmoid" title="Pages tagged Sigmoid" rel="tag">Sigmoid</a> •  <a href="https://vibrantabhi19.github.io/tags/#Tanh" title="Pages tagged Tanh" rel="tag">Tanh</a> •  <a href="https://vibrantabhi19.github.io/tags/#Relu" title="Pages tagged Relu" rel="tag">Relu</a> •  <a href="https://vibrantabhi19.github.io/tags/#Maxout" title="Pages tagged Maxout" rel="tag">Maxout</a> •  <a href="https://vibrantabhi19.github.io/tags/#Leaky+Relu" title="Pages tagged Leaky Relu" rel="tag">Leaky Relu</a></span>
+    
+      <span class="social-icons"><a href="https://twitter.com/share?text=An%20insight%20into%20Neural%20network's%20Activation%20functions&amp;url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/&amp;via=abhi_kumar07/" class="social-icons" target="_blank" title="Share on twitter"> <i class="fa fa-twitter meta"></i></a>
+<a href="https://plus.google.com/share?url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" class="social-icons" target="_blank" title="Share on Google+"> <i class="fa fa-google-plus"></i></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" class="social-icons" target="_blank" title="Share on LinkedIn"> <i class="fa fa-linkedin"></i></a>
+<a class="fa fa-facebook" href="https://facebook.com/sharer.php?u=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/" rel="nofollow" target="_blank" title="Share on Facebook"></a>
+<a href="https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/#disqus_thread" class="social-icons" title="Comments"><i class="fa fa-comments"></i></a>
+
+<a href="javascript:window.print()" class="social-icons" title="Printer friendly format"><i class="fa fa-print"></i></a>
+</span>
+
+    
+</div>
+
+
+  <div class="printMsg">
+<table>
+  <thead>
+    <tr>
+      <th><i class="fa fa-twitter">@abhi_kumar07/</i></th>
+      <th>QR code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+<i class="fa fa-anchor"> https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/</i><br><i class="fa fa-calendar"> 17-Dec-16</i><br><i class="fa fa-creative-commons"> BY-NC-SA 4.0 https://vibrantabhi19.github.io/disclosure</i>
+</td>
+      <td><img src="https://chart.googleapis.com/chart?chs=150x150&amp;cht=qr&amp;chl=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/&amp;choe=UTF-8" alt="https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+<div class="page-break"></div>
+<div class="related">
+  <h2>Related Posts</h2>
+<ul>
+  
+    
+  
+     
+       
+        
+       
+        
+       
+        
+       
+        
+       
+        
+       
+        
+       
+        
+      
+    
+  
+     
+       
+        
+       
+        
+       
+        
+       
+        
+       
+        
+       
+        
+       
+        
+      
+    
+  
+</ul>
+</div>
+
+<div class="prevnext">
+  
+    <a class="prevnext-item older" href="https://vibrantabhi19.github.io/blog/2016/10/13/Iris-dataset-solution/" title="Iris Flower DataSet: Visualizing a Decision Tree">Older</a>
+  
+  
+    <span class="prevnext-item older">Newer</span>
+  
+</div>
+
+<div class="page-break"></div>
+
+<div id="disqus_thread"></div>
+<!-- /#disqus_thread -->
+
+                    <div class="custom-footer" style="display: block;">
+            <div class="footer-social-icons">
+            <ul class="social-icons">
+            
+              
+            <li><a href="https://twitter.com/abhi_kumar07" rel="me" target="_blank" class="social-icons" title="Follow me @abhi_kumar07"> <i class="fa fa-twitter-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://plus.google.com/u/0/+AbhishekKumarTiwari07" rel="me" target="_blank" class="social-icons" title="Follow me +AbhishekKumarTiwari07"> <i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://github.com/vibrantabhi19" rel="me" target="_blank" class="social-icons" title="Code repository"> <i class="fa fa-github-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://vibrantabhi19.github.io/contact/" rel="me" class="social-icons" title="Reach Us"> <i class="fa fa-envelope-square fa-2x"></i></a></li>
+            
+              
+            <li><a href="https://vibrantabhi19.github.io/feed.xml" rel="me" class="social-icons" title="Subscribe to RSS"> <i class="fa fa-rss-square fa-2x"></i></a></li>
+                      
+            </ul>
+            </div>
+            <h6 class="text-footer">
+<a rel="license" href="https://vibrantabhi19.github.io/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure" class="social-icon"><i class="fa fa-creative-commons"></i></a> <a rel="license" href="https://vibrantabhi19.github.io/disclosure/" title="CC BY-NC-SA 4.0 License, link to site disclosure">2016-2016</a>: <a href="https://vibrantabhi19.github.io" title="Home">vibrantabhi19.github.io</a> | <a href="https://vibrantabhi19.github.io/about/" rel="me">About</a>
+</h6>
+            </div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    
+
+<!-- gist embed -->
+
+  <!--Gist embed -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+
+
+
+<!-- disqus comments -->
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//vibrantabhi19-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+                                
+
+<!-- Init Super-Search -->
+
+
+<div class="super-search" id="js-super-search">
+    <a href="javascript:void(0)" onclick="superSearch.toggle()" class="super-search__close-btn">X</a>
+    <input type="text" placeholder="Type here to search" class="super-search__input" id="js-super-search__input">
+    <ul class="super-search__results" id="js-super-search__results"></ul>
+</div>
+
+<script src="/public/js/super-search.js"></script>
+<script>
+superSearch({
+    searchFile: '/feed.xml',
+    searchSelector: '#js-super-search', // CSS Selector for search container element.
+    inputSelector: '#js-super-search__input', // CSS selector for <input>
+    resultsSelector: '#js-super-search__results' // CSS selector for results container
+});
+</script>
+
+
+</body>
+</html>

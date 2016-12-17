@@ -2,12 +2,17 @@ callback([
 
   {
     "text": "What's Jekyll?",
-    "href": "http://localhost:4000/blog/2015/01/31/whats-jekyll/"
+    "href": "https://vibrantabhi19.github.io/blog/2015/01/31/whats-jekyll/"
   } ,
 
   {
     "text": "Iris Flower DataSet: Visualizing a Decision Tree",
-    "href": "http://localhost:4000/blog/2016/10/13/Iris-dataset-solution/"
+    "href": "https://vibrantabhi19.github.io/blog/2016/10/13/Iris-dataset-solution/"
+  } ,
+
+  {
+    "text": "An insight into Neural network's Activation functions",
+    "href": "https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/"
   } 
 
 ])
