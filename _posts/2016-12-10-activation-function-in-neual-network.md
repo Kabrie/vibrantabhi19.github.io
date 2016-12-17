@@ -3,7 +3,7 @@ layout: post
 title: "An insight into Neural network's Activation functions"
 date: "2016-12-17"
 slug: "activation_function"
-description: "Are you a beginner in Neural Network confused about which activation function you should use, well here is a breif of the common activation functions that are used in Neural Network."
+description: "Are you a beginner in Neural Network confused about which activation function you should use, well here is a brief of the common activation functions that are used in Neural Network."
 category: 
   - Neural Network
   - Machine Learning
@@ -65,9 +65,9 @@ So, in simple words a Activation fucntion of a node in terms of Neural Network d
 # History of Activation function.
 
 The Mark 1 Perceptron machine was the first implementation of the perceptron algorithm, the first learning algorithm for neural network. This machine used a unit step function as a kind of "Activation Function"(No such term existed at that time.) But there was no concept of loss function and no concept of back propagation.
-Then in late 60's a paper came out titled ["Perceptrons, Adalines and Backpropagation"](http://isl-www.stanford.edu/~widrow/papers/bc1995perceptronsadalines.pdf). This was the first multi layer perceptron network. Then in 1986 a research paper by Rumelhart came them emphasised the use of back propagation and after this the concept of back propagation became very popular, the paper also talked about loss function so this was a major advacement in Neural Network.
+Then in late 60's a paper came out titled ["Perceptrons, Adalines and Backpropagation"](http://isl-www.stanford.edu/~widrow/papers/bc1995perceptronsadalines.pdf). This was the first multi layer perceptron network. Then in 1986 a research paper by Rumelhart came them emphasised the use of back propagation and after this the concept of back propagation became very popular, the paper also talked about loss function so this was a major advancement in Neural Network.
 After this the domain of Neural Network remained quite for many many years. Though many small development took place in these year but it was late 2000's that boosted the world of Neural Network.
-Here are links of some research paper that happened in the 2000's, (espically have a look at the Microsoft reasearch paper of 2012)
+Here are links of some research paper that happened in the 2000's, (especially have a look at the Microsoft research paper of 2012)
 
 
 
@@ -90,13 +90,13 @@ $$
 The sigmoid non-linearity has the mathematical form $$ \begin{align*} & \sigma(x) = 1/(1+e^{-x}) \end{align*} $$ and is shown in the image above on the left. 
 
 
-The sigmoid function takes a real-valued number and “squashes” it into range between 0 and 1. And this "Squasing" technique is one of the major drawbacks of the sigmoid function. In particular, large negative numbers become 0 and large positive numbers become 1. Lets see the major drawback of the Sigmoid activation function in detail:
+The sigmoid function takes a real-valued number and “squashes” it into range between 0 and 1. And this "Squasing" technique is one of the major drawbacks of the sigmoid function. In particular, large negative numbers become 0 and large positive numbers become 1. Let's see the major drawback of the Sigmoid activation function in detail:
 
-- **Sigmoids saturate and kill gradients:** I just mentioned that the sigmoid function squashes a number in the range of 0 and 1 and as a result the neuron's activatiobn saturates at wither 1 or 0. See the sigmoid curve once again, at large positive negative values the gradient is almost 0. Now during Backpropagation this gradients are supposed to be multiplied by the local gradient at each neuron and in this case the output of backpropagation will almost come out to be 0 (due to very small gradient value). Therefore, if the local gradient is very small, it will effectively “kill” the gradient and almost no signal will flow through the neuron to its weights and recursively to its data.
+- **Sigmoids saturate and kill gradients:** I just mentioned that the sigmoid function squashes a number in the range of 0 and 1 and as a result the neuron's activation saturates at wither 1 or 0. See the sigmoid curve once again, at large positive negative values the gradient is almost 0. Now during Backpropagation this gradients are supposed to be multiplied by the local gradient at each neuron and in this case the output of backpropagation will almost come out to be 0 (due to very small gradient value). Therefore, if the local gradient is very small, it will effectively “kill” the gradient and almost no signal will flow through the neuron to its weights and recursively to its data.
 
-- **Sigmoid outputs are not zero-centered:** Many a times (almost everytime) it happens that the neuron recieves data thaat is not zero-centered. In that case if the data coming into the neuron is always positive, the gradient on the weights 'w' will always be either positive or all negative during backpropogation(depending upon the gradient). Due to this the gradient updates will be very random (zig-zag shape to be precise) which is very undesirable. 
+- **Sigmoid outputs are not zero-centered:** Many a times (almost everytime) it happens that the neuron receives data that is not zero-centered. In that case if the data coming into the neuron is always positive, the gradient on the weights 'w' will always be either positive or all negative during backpropagation(depending upon the gradient). Due to this the gradient updates will be very random (zig-zag shape to be precise) which is very undesirable. 
 
-- **Slow convergence:** THe sigmoid activation function has a very slow convergence. So the initialization of the weights become very important if we are using the sigmoid activation function. (The reason can be infered from the above two points), if the initial weights are too large then most of the neurons would saturate and the network will barely learn. (Tip: Start with a very small 'w')
+- **Slow convergence:** The sigmoid activation function has a very slow convergence. So the initialization of the weights become very important if we are using the sigmoid activation function. (The reason can be inferred from the above two points), if the initial weights are too large then most of the neurons would saturate and the network will barely learn. (Tip: Start with a very small 'w')
 
 - **Expensive:** The sigmoid function uses the exponential function, which is computationally expensive as compared to other activation functions.
 
@@ -158,7 +158,7 @@ print l1
 
 ## **Tanh Activation function**
 
-The tanh non-linearity is shown on the image below. Tanh is nothing but $$ \begin{align*} & \textrm{tanh}(x) = 2\sigma(2x) - 1 \end{align*} $$. Tanh came into the picture with the goal of answering one of the problem of Sigmoid activation function(Point no 2 of Sigmoid). It is zero-centered and squashes a real-valued number to the range [-1, 1]. Like the sigmoid neuron, its activations saturate, but unlike the sigmoid neuron its output is zero-centered. Although tanh activation function is nothing but 2*sigmoid - 1, but for a better understanding of the advantages of tanh you can have a look at [this paper](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf) 
+The tanh non-linearity is shown on the image below. Tanh is nothing but $$ \begin{align*} & \textrm{tanh}(x) = 2\sigma(2x) - 1 \end{align*} $$. Tanh came into the picture with the goal of answering one of the problems of Sigmoid activation function(Point no 2 of Sigmoid). It is zero-centered and squashes a real-valued number to the range [-1, 1]. Like the sigmoid neuron, its activations saturate, but unlike the sigmoid neuron its output is zero-centered. Although tanh activation function is nothing but 2*sigmoid - 1, but for a better understanding of the advantages of tanh you can have a look at [this paper](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf) 
 
 {:.text-center img}
 ![A tanh graph, see the range [-1, 1]]({{ site.urlimg }}/tanh.png "Toy example")
@@ -168,12 +168,12 @@ The tanh non-linearity is shown on the image below. Tanh is nothing but $$ \begi
 
 ## **ReLU Activation function**
 
-The Rectified Linear Unit is one of the most popular and widely used activation function. The ReLU is a simple thresholding functoion f(x)=max(0,x). Lets see the pros and cons of the ReLU activation function.
+The Rectified Linear Unit is one of the most popular and widely used activation function. The ReLU is a simple thresholding function f(x)=max(0,x). Let's see the pros and cons of the ReLU activation function.
 
 - **Faster Convergence rate:** The convergence of the gradient is accelerated by a factor of 6 as compared to the sigmoid/tanh functions. It is argued that this is due to its linear, non-saturating form. 
 
-- **Computattionaly cheap:** The ReLU activation function simply thresholds the input so it is computationally very cheap.
-Gradient kill or Dying ReLU: As you can see that the ReLU is 0 for all negative values so it is possible that a large gradient flowing through the unit can never get activated and remain 'dead' for the whole time, this is alsi referred to as the 'dying ReLU' problem. So the ReLU units can be fragile during training and can “die”. Though we can tackle this problem to some extend with proper setting of the Learning rate. [Understanding Deep Neural Networks with Rectied Linear Units](https://arxiv.org/pdf/1611.01491v3.pdf) gives a better insight into the Relu networks.
+- **Computationally cheap:** The ReLU activation function simply thresholds the input so it is computationally very cheap.
+Gradient kill or Dying ReLU: As you can see that the ReLU is 0 for all negative values so it is possible that a large gradient flowing through the unit can never get activated and remain 'dead' for the whole time, this is also referred to as the 'dying ReLU' problem. So the ReLU units can be fragile during training and can “die”. Though we can tackle this problem to some extent with proper setting of the Learning rate. [Understanding Deep Neural Networks with Rectied Linear Units](https://arxiv.org/pdf/1611.01491v3.pdf) gives a better insight into the Relu networks.
 
 - The RelU activation function is also non-zero centered.
 
@@ -186,8 +186,8 @@ Gradient kill or Dying ReLU: As you can see that the ReLU is 0 for all negative 
 ## **Leaky ReLU Activation function**
 
 ReLu activation function had this major "dying ReLU" problem and the leaky ReLUs are one attempt to fix the “dying ReLU” problem. Here for all negative values of x (x < 0), the leaky ReLU have a very small negative slope. That is, the function computes f(x)=𝟙(x<0)(αx)+𝟙(x>=0)(x)
-where α is a small constant. In some problems this activation function works wonder but it is not always very consistant. You are more than encouraged to try this on your own.
-Interesting Point: The constant α can also be made as one of the parameter of each neuron and this can be learned by the network. Such editing are also termed as PReLU neurons, you can see a lot more about this in [Delving Deep into Rectifiers, by Kaiming He et al., 2015](https://arxiv.org/pdf/1502.01852.pdf). (Warning: It has 3 pages of mathamatical derivation)
+where α is a small constant. In some problems this activation function works wonder but it is not always very consistent. You are more than encouraged to try this on your own.
+Interesting Point: The constant α can also be made as one of the parameters of each neuron and this can be learned by the network. Such editing are also termed as PReLU neurons, you can see a lot more about this in [Delving Deep into Rectifiers, by Kaiming He et al., 2015](https://arxiv.org/pdf/1502.01852.pdf). (Warning: It has 3 pages of mathematical derivation)
 
 
 ## **Maxout**
