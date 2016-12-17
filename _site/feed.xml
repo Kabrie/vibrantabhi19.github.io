@@ -5,7 +5,7 @@
     <description>This is my personal Blog/Portfolio</description>
     <link>https://vibrantabhi19.github.io/</link>
     <atom:link href="https://vibrantabhi19.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2016-12-17T23:34:40+05:30</updated>
+    <updated>2016-12-17T23:36:29+05:30</updated>
     <id>https://vibrantabhi19.github.io</id>
     <author>
       <name>Abhishek Kumar</name>
@@ -217,7 +217,13 @@ where a non-linearity is applied on the dot product between the weights and the 
 
 &lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
 
+&lt;p&gt;Refer to the following docs/videos for more information.&lt;/p&gt;
+
+&lt;p&gt;1: &lt;a href=&quot;http://cs231n.github.io&quot;&gt;CS231n: Andrej Kapathy explanation is the best&lt;/a&gt;. (I took a lot from cs231n page for writing this blog.)&lt;/p&gt;
+
 &lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/dyndna/lanyon-plus/issues/new&quot;&gt;Open an issue.&lt;/a&gt; Feel free to contribute.&lt;/p&gt;
+
+&lt;p&gt;P.S Jupyter notebook for each activation function is coming soon.. Stay tuned.&lt;/p&gt;
 &lt;hr&gt;&lt;a href=&quot;https://twitter.com/share?text=An insight into Neural network's Activation functions&amp;url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/&amp;via=abhi_kumar07/&quot; target=&quot;_blank&quot; title=&quot;tweet author @abhi_kumar07/&quot;&gt;tweet author&lt;/a&gt; | &lt;a href=&quot;https://plus.google.com/share?url=https://vibrantabhi19.github.io/blog/2016/12/17/activation_function/&quot; target=&quot;_blank&quot; title=&quot;Share on Google+&quot;&gt;share on Google+&lt;/a&gt;
 </description>
         

@@ -210,7 +210,11 @@ There is always this question/doubt that every beginner Neural Network enthusias
 ### References
 
 
+Refer to the following docs/videos for more information.
 
-[^1]: [CS231n: Andrej Kapathy explanation is the best](http://cs231n.github.io). (I took a lot from cs231n page for writing this blog.)
+1: [CS231n: Andrej Kapathy explanation is the best](http://cs231n.github.io). (I took a lot from cs231n page for writing this blog.)
 
 Want to see something else added? <a href="https://github.com/dyndna/lanyon-plus/issues/new">Open an issue.</a> Feel free to contribute.
+
+
+P.S Jupyter notebook for each activation function is coming soon.. Stay tuned.
