@@ -31,8 +31,11 @@ videocredit: tedtalks
 
 # A bit of Introduction
 
+
+
 {:.text-center img}
-![Structure of a simple neuron]({{ site.urlimg }}/simple-neuron.png "Toy example")
+![Structure of a simple neuron]({{ site.urlimg }}/simple-neuron.png "Structure of a simple neuron")
+
 
 The basic building block of a neural network is a processing-unit which is linked to n input-units through a set of n directed connections. The single unit model is characterized by: 
 
@@ -46,8 +49,9 @@ But for better understanding lets discuss very briefly the biological system fro
 {:.text-center img}
 ![A image of a biological neuron]({{ site.urlimg }}/neuron.png "Toy example")
 
+
 {:.text-center img}
-![A mathematical model of a Neuron]({{ site.urlimg }}/neuron_model.jpeg "Toy example")
+![A mathematical model of a Neuron]({{ site.urlimg }}/neuron_model.png "Toy example")
 
 
 The basic computational unit of the brain is a neuron. Approximately 86 billion neurons can be found in the human nervous system and they are connected with approximately 10^14 - 10^15 synapses. The diagram below shows a cartoon drawing of a biological neuron (left) and a common mathematical model (right). Each neuron receives input signals from its dendrites and produces output signals along its (single) axon. The axon eventually branches out and connects via synapses to dendrites of other neurons. In the computational model of a neuron, the signals that travel along the axons (e.g. x<sub>0</sub>) interact multiplicatively (e.g. w<sub>0</sub>x<sub>0</sub>) with the dendrites of the other neuron based on the synaptic strength at that synapse (e.g. w<sub>0</sub>). 
@@ -174,7 +178,7 @@ Gradient kill or Dying ReLU: As you can see that the ReLU is 0 for all negative 
 - The RelU activation function is also non-zero centered.
 
 {:.text-center img}
-![A Relu graph]({{ site.urlimg }}/relu.jpeg "Toy example")
+![A Relu graph]({{ site.urlimg }}/relu.png "Toy example")
 
 **Verdict:** If you are a beginner in Neural Network then the ReLU activation function should be your default choice.
 

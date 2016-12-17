@@ -5,7 +5,7 @@
     <description>This is my personal Blog/Portfolio</description>
     <link>https://vibrantabhi19.github.io/</link>
     <atom:link href="https://vibrantabhi19.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <updated>2016-12-17T22:50:45+05:30</updated>
+    <updated>2016-12-17T23:04:45+05:30</updated>
     <id>https://vibrantabhi19.github.io</id>
     <author>
       <name>Abhishek Kumar</name>
@@ -16,7 +16,7 @@
         
           <description>&lt;h1 id=&quot;a-bit-of-introduction&quot;&gt;A bit of Introduction&lt;/h1&gt;
 
-&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//simple-neuron.png&quot; alt=&quot;Structure of a simple neuron&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//simple-neuron.png&quot; alt=&quot;Structure of a simple neuron&quot; title=&quot;Structure of a simple neuron&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The basic building block of a neural network is a processing-unit which is linked to n input-units through a set of n directed connections. The single unit model is characterized by:&lt;/p&gt;
 
@@ -31,7 +31,7 @@
 
 &lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//neuron.png&quot; alt=&quot;A image of a biological neuron&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
 
-&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//neuron_model.jpeg&quot; alt=&quot;A mathematical model of a Neuron&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//neuron_model.png&quot; alt=&quot;A mathematical model of a Neuron&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The basic computational unit of the brain is a neuron. Approximately 86 billion neurons can be found in the human nervous system and they are connected with approximately 10^14 - 10^15 synapses. The diagram below shows a cartoon drawing of a biological neuron (left) and a common mathematical model (right). Each neuron receives input signals from its dendrites and produces output signals along its (single) axon. The axon eventually branches out and connects via synapses to dendrites of other neurons. In the computational model of a neuron, the signals that travel along the axons (e.g. x&lt;sub&gt;0&lt;/sub&gt;) interact multiplicatively (e.g. w&lt;sub&gt;0&lt;/sub&gt;x&lt;sub&gt;0&lt;/sub&gt;) with the dendrites of the other neuron based on the synaptic strength at that synapse (e.g. w&lt;sub&gt;0&lt;/sub&gt;).&lt;/p&gt;
 
@@ -196,7 +196,7 @@ Gradient kill or Dying ReLU: As you can see that the ReLU is 0 for all negative 
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//relu.jpeg&quot; alt=&quot;A Relu graph&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;text-center&quot;&gt;&lt;img src=&quot;https://vibrantabhi19.github.io/images//relu.png&quot; alt=&quot;A Relu graph&quot; title=&quot;Toy example&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Verdict:&lt;/strong&gt; If you are a beginner in Neural Network then the ReLU activation function should be your default choice.&lt;/p&gt;
 
