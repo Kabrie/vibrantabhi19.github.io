@@ -94,8 +94,10 @@ example.com/images/icons/android-icon-192x192.png
 *   `rfeed.xml`
     *   Not required unless you are cross-posting about R language on blog aggregation site(s).
 
-END
-
+## Contributors
+ Kabrie (Abhiroop kumar Banerjee)
+   https://github.com/Kabrie
+   
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
